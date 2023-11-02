@@ -1,0 +1,253 @@
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+body {
+    padding: 50px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.field {
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+.field__text {
+    color: #6F7482;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+    letter-spacing: 0.16px;
+    margin-bottom: 2px;
+}
+
+.field__rec {
+    color: #ED0131;
+}
+
+.field__input {
+    display: block;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    background: #F8FAFC;
+    padding: 12px;
+
+    color: #3B4256;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+    letter-spacing: 0.16px;
+    border: 1px solid transparent;
+    transition: .2s all ease-in;
+}
+
+.field__input::placeholder {
+    color: #B8BCCA;
+}
+
+.field__input:focus {
+    border-color: #0048D9;
+}
+
+.field__textarea {
+    display: block;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 12px;
+    border-radius: 4px;
+    background: #F8FAFC;
+    min-height: 139px;
+    max-width: 300px;
+    resize: vertical;
+}
+
+.field__select {
+    display: block;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 12px;
+    border-radius: 4px;
+    background: #F8FAFC;
+}
+
+/*-------checkbox-----------*/
+
+.chk {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px;
+}
+
+.chk__input {
+    display: none;
+}
+
+.chk__input:checked~.chk__check {
+    background: #3B4256;
+}
+
+.chk__input:checked~.chk__check::before {
+    opacity: 1;
+}
+
+.chk__check {
+    width: 21px;
+    height: 21px;
+    border: 2px solid #3B4256;
+    border-radius: 4px;
+    background: transparent;
+    transition: .2s all ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chk__check::before {
+    content: '\2713';
+    color: #F8FAFC;
+    opacity: 0;
+    transition: .2s all ease-in;
+}
+
+.chk__text {
+    color: #3B4256;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+/*--------radio---------*/
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+
+.radio__input:checked~.radio__check::before {
+    opacity: 1;
+}
+
+.radio__check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3B4256;
+    border-radius: 50%;
+    background: transparent;
+    transition: .2s all ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio__check::before {
+    content: '';
+    background: #3B4256;
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: .2s all ease-in;
+}
+
+.radio__text {
+    color: #3B4256;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+/*-------button-----------*/
+
+button {
+    border: 0;
+    margin-top: 20px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    padding: 12px 24px;
+    background: limegreen;
+    border-radius: 4px;
+}
+
+/*-------switch-----------*/
+
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px;
+}
+
+.switch__input {
+    display: none;
+}
+
+.switch__input:checked~.switch__check {
+    background: #3B4256;
+    border: 2px solid #3B4256;
+    
+    /*justify-content: right;*/
+
+}
+
+.switch__input:checked~.switch__check::before {
+    background: #ffffff;
+    transform: translateX(20px);
+}
+
+.switch__check {
+    width: 51px;
+    height: 31px;
+    border: 2px solid #E2E7ED;
+    border-radius: 15px;
+    background: #E2E7ED;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: .20s all ease-in;
+}
+
+.switch__check::before {
+    content: '';
+    background: #ffffff;
+    opacity: 0;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: .20s all ease-in;
+}
+
+.switch__text {
+    color: #3B4256;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
